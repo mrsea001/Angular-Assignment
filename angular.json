@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "single-page": {
+    "Angular-Bootstrap": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/single-page",
+            "outputPath": "dist/Angular-Bootstrap",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,9 +28,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -58,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "single-page:build"
+            "browserTarget": "Angular-Bootstrap:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "single-page:build:production"
+              "browserTarget": "Angular-Bootstrap:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "single-page:build"
+            "browserTarget": "Angular-Bootstrap:build"
           }
         },
         "test": {
@@ -84,7 +92,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           }
@@ -106,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "single-page:serve"
+            "devServerTarget": "Angular-Bootstrap:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "single-page:serve:production"
+              "devServerTarget": "Angular-Bootstrap:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "single-page"
+  "defaultProject": "Angular-Bootstrap"
 }

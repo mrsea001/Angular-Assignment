@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/">10Pearls</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-nav">
+        <button routerLink="/home" mat-button class="nav-item nav-link active">Home</button>
+    
+        <button mat-button [matMenuTriggerFor]="aboveMenu" class="nav-item nav-link active">3rd Party Api</button>
+        <mat-menu #aboveMenu="matMenu" yPosition="above">
+            <ng-template matMenuContent>
+                <button mat-menu-item routerLink="/weather">Open Weather</button>
+            </ng-template>
+        </mat-menu>
+    
+        <!-- <button mat-button [matMenuTriggerFor]="belowMenu" class="nav-item nav-link active">Below</button>
+        <mat-menu #belowMenu="matMenu" yPosition="below">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+        </mat-menu>
+    
+        <button mat-button [matMenuTriggerFor]="beforeMenu" class="nav-item nav-link active">Before</button>
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+        </mat-menu>
+    
+        <button mat-button [matMenuTriggerFor]="afterMenu" class="nav-item nav-link active">After</button>
+        <mat-menu #afterMenu="matMenu" xPosition="after">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+        </mat-menu>   -->
+        
+        <button routerLink="/login" mat-button class="nav-item nav-link active">Login</button>
+
+    </div>
+</nav>

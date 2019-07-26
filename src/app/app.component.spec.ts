@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'single-page'`, () => {
+  it(`should have as title 'Angular-Bootstrap'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('single-page');
+    expect(app.title).toEqual('Angular-Bootstrap');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to single-page!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to Angular-Bootstrap!');
   });
 });

@@ -1,0 +1,40 @@
+<nav  class="navbar navbar-expand-sm navbar-light bg-light">
+  <a  class="navbar-brand"  routerLink="/">10 Pearls</a>
+  <button  class="navbar-toggler"  type="button"  data-toggle="collapse"  data-target="#navbarSupportedContent"  aria-controls="navbarSupportedContent"  aria-expanded="false"  aria-label="Toggle navigation">
+  <span  class="navbar-toggler-icon"></span>
+  </button>
+  <div  class="collapse navbar-collapse"  id="navbarSupportedContent">
+      <ul  class="navbar-nav mr-auto">
+        <li  class="nav-item active">
+          <a  class="nav-link"  routerLink="/home"><i class="fa fa-home"></i>Home <span  class="sr-only">(current)</span></a>
+        </li>
+        <li  class="nav-item dropdown">
+            <a  class="nav-link dropdown-toggle"  href="#"  id="navbarDropdown"  role="button"  data-toggle="dropdown"  aria-haspopup="true"  aria-expanded="false">
+            3rd Party API
+            </a>
+          <div  class="dropdown-menu"  aria-labelledby="navbarDropdown">
+            <a  class="dropdown-item" [routerLink]="'/weather'"> Open Weather </a>
+            <!-- <div  class="dropdown-divider"></div> -->
+          </div>
+        </li>
+        <li  class="nav-item">
+            <a class="nav-item nav-link" routerLink="/login"><i class="fa fa-sign-in"></i> Login <span class="sr-only">(current)</span></a>
+          </li>
+      </ul>
+  </div>
+</nav>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/">10Pearls</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" routerLink="/home"><i class="fa fa-home"></i>  Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" routerLink="/login"><i class="fa fa-sign-in"></i> Login <span class="sr-only">(current)</span></a>
+      </div>
+    </div>
+  </nav> -->
+
+

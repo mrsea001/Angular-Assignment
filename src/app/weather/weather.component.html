@@ -1,19 +1,21 @@
+<div class="col-12 text-center ">
+<h2>OpenWeather API </h2>
 
-<h2>Yahoo! Weather </h2>
-<div class="col‑md‑8 col‑md‑offset‑2">
  <div class="form‑group">
-  <input type="text" [(ngModel)]="cityName" class="form‑control" placeholder="Enter City name ..."><br>
-  <button type="button" class="btn btn‑primary" (click)="callWeatherService()">Submit</button>
-  <br><br><br>
-  <br>
-  <p class="well lead">
+  <input type="text" id="txtCityName" [(ngModel)]="cityName" class="form‑control" placeholder="Enter City name ..."><br>
+</div>
+<button type="button" class="btn btn-primary" (click)="callWeatherService()">Submit</button>
+<br>
+<br>
+<div class="form-group"> 
+<p class="well lead">
     <i>City :</i> {{ this.op_city }}, {{this.op_country}} <br>
     <i>Current Condition :</i> {{ this.op_text }} <br>
     <i>Current Temperature :</i> {{ this.op_temp }} <br>
     <i>Humidity :</i> {{ this.op_humidity }} <br>
   </p>
-  <p class="text‑info">Total #of all the service requests including Weather, Movie, and Currency is :
+  <p>Total #of all the service requests is :
     <span class="badge">{{this._sharedService.totReqsMade}}</span>
   </p>
- </div>
+</div> 
 </div>

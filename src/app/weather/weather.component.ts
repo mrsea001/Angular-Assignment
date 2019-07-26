@@ -28,9 +28,6 @@ export class WeatherComponent implements OnInit {
       .subscribe(
       data => { 
         this.op_city = data.name;
-        // this.op_region = lstresult["query"]["results"]["channel"]["location"]["region"];
-        // this.op_country = lstresult["query"]["results"]["channel"]["location"]["country"];
-        // this.op_date = lstresult["query"]["results"]["channel"]["item"]["condition"]["date"];
         this.op_text = data.weather[0].description;
         this.op_temp = data.main.temp;
         this.op_humidity=data.main.humidity;

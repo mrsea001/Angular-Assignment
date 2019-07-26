@@ -5,32 +5,38 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+import { MatmenuComponent } from './matmenu/matmenu.component';
 import { WeatherComponent } from './weather/weather.component';
-import { CurrencyComponent } from './currency/currency.component';
-import { MovieComponent } from './movie/movie.component';
-import { CONST_ROUTING } from './app.routing';
 import { SharedService } from "./shared.service";
-
-
+import { FooterComponent } from './footer/footer.component';
+import { UserService } from './user.service';
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
+    NavbarComponent,
+    HomeComponent,
+    LoginComponent,
+    MatmenuComponent,
     WeatherComponent,
-    CurrencyComponent,
-    MovieComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CONST_ROUTING,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule,
+    MatButtonModule, MatCheckboxModule,
+    MatMenuModule,MatIconModule
   ],
-  providers: [
-    SharedService,
-  ],
+  providers: [SharedService,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
